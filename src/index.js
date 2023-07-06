@@ -9,6 +9,15 @@ pageLoad();
 
 (function switchTab() {
 
+    function removeCurrentTab() {
+        const tabs = document.querySelector(".tab");
+        tabs.forEach((tab) => {
+            if (tab.classList.contains('current-tab')) {
+                tab.classList.remove('current-tab');
+            }
+        })
+
+    }
     function setCurrentTab(tab) {
         tab.classList.add('current-tab');
 
@@ -26,6 +35,8 @@ pageLoad();
                 pageContainer.removeChild(pageContainer.lastChild);
             }
             // contactTab();
+            removeCurrentTab();
+            setCurrentTab();
         }
 
         switch(e.target.id) {
