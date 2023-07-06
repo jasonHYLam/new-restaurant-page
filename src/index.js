@@ -1,1 +1,4 @@
-console.log('ladies and gentlemen')
+import pageLoad from "./pageload";
+
+console.log('yes')
+pageLoad();
