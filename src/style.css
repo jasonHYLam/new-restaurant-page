@@ -8,3 +8,7 @@
     background-color: red;
     padding: 10px 20px 10px;
 }
+
+.current-tab {
+    border-bottom: solid blue 2px;
+}

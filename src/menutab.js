@@ -1,7 +1,7 @@
 import { createTabs } from "./tab";
 
 function menuTab() {
-    createTabs();
+    // createTabs();
 
     let header = document.createElement('p');
     header.textContent = 'Menu';
