@@ -1,7 +1,4 @@
-import { createTabs } from "./tab";
-
 function homeTab() {
-    createTabs();
 
     let header = document.createElement('p');
     header.textContent = 'Generic Restaurant';

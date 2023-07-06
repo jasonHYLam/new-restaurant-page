@@ -9,15 +9,6 @@ pageLoad();
 
 (function switchTab() {
 
-    // function removeCurrentTab() {
-    //     const tabs = document.querySelector(".tab");
-    //     tabs.forEach((tab) => {
-    //         if (tab.classList.contains('current-tab')) {
-    //             tab.classList.remove('current-tab');
-    //         }
-    //     })
-
-    // }
     function setCurrentTab(tab) {
         tab.classList.add('current-tab');
 

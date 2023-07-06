@@ -1,7 +1,7 @@
-import { createTabs } from "./tab";
 import { homeTab } from "./hometab";
 
 function pageLoad() {
+    console.log('hey');
 
     let pageContainer = document.querySelector('#content');
 
@@ -19,6 +19,7 @@ function pageLoad() {
         pageBody = document.createElement("div");
         pageBody.classList.add('page-body');
         pageContainer.appendChild(pageBody);
+
     }
 
     function createTabContainer() {
@@ -32,12 +33,15 @@ function pageLoad() {
         tab.classList.add('tab');
         tab.textContent = name;
         tab.id = name.toLowerCase();
+        function getTab() {return tab};
+        return {getTab};
     }
 
     function populateTabContainer() {
-        let homeTab = createTab('Home');
-        let menuTab = createTab('Menu');
-        let contactTab = createTab('Contacts');
+        let homeTab = createTab('Home').getTab();
+        console.log(homeTab)
+        let menuTab = createTab('Menu').getTab();
+        let contactTab = createTab('Contacts').getTab();
 
         tabContainer.appendChild(homeTab);
         tabContainer.appendChild(menuTab);
@@ -53,7 +57,6 @@ function pageLoad() {
 
 
 
-createTabs();
 
 homeTab();
 }
