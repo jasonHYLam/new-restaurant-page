@@ -1,5 +1,6 @@
 function contactTab() {
-    let pageContainer = document.querySelector("div#content");
+    // let pageContainer = document.querySelector("div#content");
+    const pageBody = document.querySelector(".page-body");
 
     let container = document.createElement('div');
     // some content
@@ -10,7 +11,7 @@ function contactTab() {
     // append that content to div
     container.appendChild(text);
     // append the div to content div
-    pageContainer.appendChild(container);
+    pageBody.appendChild(container);
 }
 
 export {contactTab};

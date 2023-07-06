@@ -16,14 +16,16 @@ pageLoad();
 
     let pageContainer = document.querySelector("div#content");
 
+    // this is sloppy but i can't think of how to get a clean reference
 
+    const pageBody = document.querySelector(".page-body");
     
     let body = document.querySelector('body');
     body.addEventListener('click', (e) => {
 
         if (e.target.classList.contains('tab')) {
-            while (pageContainer.lastChild) {
-                pageContainer.removeChild(pageContainer.lastChild);
+            while (pageBody.lastChild) {
+                pageBody.removeChild(pageBody.lastChild);
             }
             // contactTab();
             // removeCurrentTab();
