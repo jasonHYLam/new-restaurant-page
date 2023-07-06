@@ -1,7 +1,4 @@
-import { createTabs } from "./tab";
-
 function contactTab() {
-    createTabs();
     let pageContainer = document.querySelector("div#content");
 
     let container = document.createElement('div');
