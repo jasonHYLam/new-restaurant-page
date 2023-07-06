@@ -1,4 +1,5 @@
 let tabContainer = document.createElement('div');
+tabContainer.classList.add('tabContainer');
 
 
 class Tab {
@@ -14,8 +15,14 @@ class Tab {
     }
 } 
 
+function resetTabs() {
+    while (tabContainer.lastChild) {
+        tabContainer.removeChild(tabContainer.lastChild);
+    }
+}
 
 function createTabs() {
+    resetTabs();
     let pageContainer = document.querySelector('div#content');
     // let tabContainer = document.createElement('div');
     let homeTab = new Tab('Home');

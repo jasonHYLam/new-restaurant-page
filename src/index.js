@@ -1,5 +1,6 @@
 import {pageLoad} from "./pageload";
 import {contactTab} from "./contacttab";
+import { homeTab } from "./hometab";
 
 pageLoad();
 
@@ -18,11 +19,12 @@ pageLoad();
             while (pageContainer.lastChild) {
                 pageContainer.removeChild(pageContainer.lastChild);
             }
-            contactTab();
+            // contactTab();
         }
 
         switch(e.target.id) {
             case 'home':
+                homeTab();
                 break;
             case 'menu':
                 break;
