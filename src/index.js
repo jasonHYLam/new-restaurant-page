@@ -1,11 +1,18 @@
 import {pageLoad} from "./pageload";
 import {contactTab} from "./contacttab";
 import { homeTab } from "./hometab";
+import { menuTab } from "./menutab";
+import './style.css';
 
 pageLoad();
 
 
 (function switchTab() {
+
+    function setCurrentTab(tab) {
+        tab.classList.add('current-tab');
+
+    }
 
     let pageContainer = document.querySelector("div#content");
 
@@ -15,7 +22,6 @@ pageLoad();
     body.addEventListener('click', (e) => {
 
         if (e.target.classList.contains('tab')) {
-            console.log(pageContainer.childNodes);
             while (pageContainer.lastChild) {
                 pageContainer.removeChild(pageContainer.lastChild);
             }
@@ -27,6 +33,7 @@ pageLoad();
                 homeTab();
                 break;
             case 'menu':
+                menuTab();
                 break;
             case 'contact':
                 contactTab();

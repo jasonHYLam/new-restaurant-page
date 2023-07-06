@@ -1,0 +1,10 @@
+.tabContainer {
+    display: flex;
+    gap: 30px;
+}
+
+.tab {
+    cursor: pointer;
+    background-color: red;
+    padding: 10px 20px 10px;
+}

@@ -7,6 +7,7 @@ function contactTab() {
     let container = document.createElement('div');
     // some content
     let text = document.createElement('p');
+    text.classList.add('body-text');
     text.textContent = "Contact us at 0xx-xxx-xx-xxx";
 
     // append that content to div
