@@ -6,18 +6,21 @@ import './style.css';
 
 pageLoad();
 
+function setCurrentTab(tab) {
+    tab.classList.add('current-tab');
+}
+
+function removeCurrentTab() {
+    let tabs = document.querySelectorAll('.tab');
+    tabs.forEach((tab) => {
+        if (tab.classList.contains('current-tab')) {
+            tab.classList.remove('current-tab');
+        }
+    })
+}
 
 (function switchTab() {
-
-    function setCurrentTab(tab) {
-        tab.classList.add('current-tab');
-
-    }
-
-    let pageContainer = document.querySelector("div#content");
-
     // this is sloppy but i can't think of how to get a clean reference
-
     const pageBody = document.querySelector(".page-body");
     
     let body = document.querySelector('body');
@@ -27,9 +30,6 @@ pageLoad();
             while (pageBody.lastChild) {
                 pageBody.removeChild(pageBody.lastChild);
             }
-            // contactTab();
-            // removeCurrentTab();
-            // setCurrentTab();
         }
 
         switch(e.target.id) {
@@ -44,6 +44,7 @@ pageLoad();
                 break;
         }
 
+        removeCurrentTab();
         setCurrentTab(e.target)
     })
 })();
