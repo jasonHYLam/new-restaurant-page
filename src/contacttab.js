@@ -2,6 +2,7 @@ function contactTab() {
     // let pageContainer = document.querySelector("div#content");
     const pageBody = document.querySelector(".page-body");
 
+    console.log('eyyy')
     let container = document.createElement('div');
     // some content
     let text = document.createElement('p');

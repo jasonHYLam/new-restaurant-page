@@ -29,6 +29,8 @@ function removeCurrentTab() {
         if (e.target.classList.contains('tab')) {
             while (pageBody.lastChild) {
                 pageBody.removeChild(pageBody.lastChild);
+                removeCurrentTab();
+                setCurrentTab(e.target)
             }
         }
 
@@ -39,12 +41,10 @@ function removeCurrentTab() {
             case 'menu':
                 menuTab();
                 break;
-            case 'contact':
+            case 'contacts':
                 contactTab();
                 break;
         }
 
-        removeCurrentTab();
-        setCurrentTab(e.target)
     })
 })();

@@ -1,6 +1,14 @@
+body {
+    margin: 0;
+    color: wheat;
+
+}
 .tab-container {
     display: flex;
     gap: 30px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    justify-content: center;
 }
 
 .tab {
@@ -11,4 +19,13 @@
 
 .current-tab {
     border-bottom: solid blue 2px;
+}
+
+#content {
+    background-color: black;
+    height: 100vh;
+}
+
+.page-body {
+    text-align: center;
 }
